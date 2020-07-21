@@ -41,7 +41,7 @@
     width: 5px;
     top: 0%;
     bottom: 0%;
-    left: 100px;
+    right: 540px;
     z-index: -1;
 
   }
@@ -82,7 +82,7 @@
     background-color: rgb(29,29,27);
     border-radius: 20px;
     padding: 50px;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
     animation: reversescale 400ms;
@@ -98,29 +98,29 @@
   }
 
   aside {
-    background-color: rgb(29,29,27)
+    background-color: #0099CC;
     grid-area: aside;
   }
 
   .a {
     grid-area: a;
     text-align: ;
-    background-image: url('images/product.jpg');
+    background-image: url('Images/product.jpg');
     background-size: cover;
-    padding: 80px 320px 80px 80px;
+    padding: 60px 240px 60px 60px;
   }
 
   .b {
     grid-area: b;
-    background-image: url('images/ml.jpg');
+    background-image: url('Images/ml.jpg');
     background-size: cover;
-    padding: 60px 180px 100px 30px;
+    padding: 40px 220px 80px 20px;
   }
   .c {
     grid-area: c;
-    background-image: url('images/coding.jpg');
+    background-image: url('Images/coding.jpg');
     background-size: cover;
-    padding: 70px 160px 180px 40px;
+    padding: 50px 130px 150px 30px;
   }
 
   .button {
@@ -168,6 +168,11 @@
   }
 footer {
   background-color: rgb(29,29,27);
+  display: grid;
+  grid-template-columns: 1fr 2fr auto auto auto 3fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2em;
   color: rgb(170,170,170);
   padding: 40px;
   right: 0px;
