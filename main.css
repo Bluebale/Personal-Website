@@ -1,0 +1,178 @@
+  body {
+    background-color: #fbf579 ;
+    margin:0px;
+    padding: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 2fr auto auto auto 2.5fr;
+    grid-gap: 2em;
+    justify-items: center;
+    align-items: center;
+    background-color:  #fa625f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    z-index: 10;
+  }
+  h3 {
+    background-color: #005995;
+    color: white;
+    padding: 20px 10px 20px 10px;
+    border-radius: 50%;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 100px 100px;
+    grid-template-areas:
+    "main"
+    "aside"
+    "footer";
+    align-items: center;
+  }
+  main::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(29,29,27);
+    height: 1000px;
+    width: 5px;
+    top: 0%;
+    bottom: 0%;
+    left: 100px;
+    z-index: -1;
+
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 4em;
+    grid-template-areas:
+    "h a"
+    "b c";
+    padding: 10px;
+    padding-top: 150px;
+    margin: 10px;
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+    grid-area: main;
+  }
+  main::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(29,29,27);
+    height: 5px;
+    width: 2000px;
+    right: 0px;
+    left: 0px;
+    top: 600px;
+    z-index: -1;
+
+  }
+  main > h1 {
+    color: black;
+    font-size: 90px;
+    grid-area: h;
+  }
+  main > div {
+    background-color: rgb(29,29,27);
+    border-radius: 20px;
+    padding: 50px;
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    animation: reversescale 400ms;
+  }
+  main > div::before {
+
+  }
+  main > div:nth-child(odd){
+    color: white;
+  }
+  main > div:nth-child(even){
+    color: white;
+  }
+
+  aside {
+    background-color: rgb(29,29,27)
+    grid-area: aside;
+  }
+
+  .a {
+    grid-area: a;
+    text-align: ;
+    background-image: url('images/product.jpg');
+    background-size: cover;
+    padding: 80px 320px 80px 80px;
+  }
+
+  .b {
+    grid-area: b;
+    background-image: url('images/ml.jpg');
+    background-size: cover;
+    padding: 60px 180px 100px 30px;
+  }
+  .c {
+    grid-area: c;
+    background-image: url('images/coding.jpg');
+    background-size: cover;
+    padding: 70px 160px 180px 40px;
+  }
+
+  .button {
+    background-color: #fa625f;
+    font-size: 20px;
+    color: rgb(3,3,3);
+    border-bottom: 4px solid rgb(3,3,3);
+    padding: 5px;
+    text-decoration: none;
+    animation: reverse-bg 800ms forwards, reverse-color
+
+  }
+    main > div:hover {
+      animation: scale 500ms forwards;
+
+    }
+
+  .button:hover {
+    background-color: #fa625f;
+    color: rgb(3,3,3);
+    animation: background-color 800ms forwards, color-change 800ms forwards;
+  }
+  @keyframes background-color {
+      100% {
+        background-color: rgb(3,3,3);
+      }
+    }
+  @keyframes color-change {
+    100% {
+      color: #fa625f;
+    }
+  }
+  @keyframes scale {
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  @keyframes reversescale {
+    0% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+footer {
+  background-color: rgb(29,29,27);
+  color: rgb(170,170,170);
+  padding: 40px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+  grid-area: footer;
+}
