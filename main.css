@@ -125,20 +125,20 @@ main::before {
 .a {
     grid-area: a;
     text-align: ;
-    background-image: url('Images/product.jpg');
+    background-image: url('images/product.jpg');
     background-size: cover;
     padding: 60px 240px 60px 60px;
 }
 
 .b {
     grid-area: b;
-    background-image: url('Images/ml.jpg');
+    background-image: url('images/ml.jpg');
     background-size: cover;
     padding: 40px 220px 80px 20px;
 }
 .c {
     grid-area: c;
-    background-image: url('Images/coding.jpg');
+    background-image: url('images/coding.jpg');
     background-size: cover;
     padding: 50px 130px 150px 30px;
 }
