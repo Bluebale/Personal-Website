@@ -138,7 +138,7 @@ main::before {
 }
 .c {
     grid-area: c;
-    background-image: url('./images/coding.jpg');
+    background-image: url('images/coding.jpg');
     background-size: cover;
     padding: 50px 130px 150px 30px;
 }
