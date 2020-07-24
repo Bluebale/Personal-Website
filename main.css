@@ -1,51 +1,76 @@
-  body {
-    background-color: #fbf579 ;
+body {
+    background-color: white;
     margin:0px;
     padding: 0px;
     font-family: 'Josefin Sans', sans-serif;
   }
-  header {
-    display: grid;
-    grid-template-columns: 2fr auto auto auto 2.5fr;
-    grid-gap: 2em;
-    justify-items: center;
-    align-items: center;
-    background-color:  #fa625f;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    z-index: 10;
-  }
-  h3 {
-    background-color: #005995;
-    color: white;
-    padding: 20px 10px 20px 10px;
-    border-radius: 50%;
-  }
-  .wrapper {
-    display: grid;
-    grid-template-rows: 1fr 100px 100px;
-    grid-template-areas:
-    "main"
-    "aside"
-    "footer";
-    align-items: center;
-  }
-  main::before {
-    content: '';
-    position: absolute;
-    background-color: rgb(29,29,27);
-    height: 1000px;
-    width: 5px;
-    top: 0%;
-    bottom: 0%;
-    right: 540px;
-    z-index: -1;
+header {
+  display: grid;
+  grid-template-columns: 2fr auto auto auto auto 2.5fr;
+  grid-gap: 2em;
+  justify-items: center;
+  align-items: center;
+  background-color:  white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  z-index: 10;
+}
 
-  }
+.logo {
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.wrapper {
+  display: grid;
+  grid-template-rows: 500px 0.7fr 180px;
+  grid-template-areas:
+  "aside"
+  "main"
+  "footer";
+}
+aside {
+  background-color: black;
+  position: relative;
+  display: grid;
+  grid-template-rows: 98px auto;
+  grid-area: aside;
+}
+.content {
+  background-color: black;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.8fr;
+  justify-items: center;
+  align-items: center;
+}
+.subhead {
+    font-size: 70px;
+    color: white;
+}
+.content > p {
+  font-size: 25px;
+  color: white;
+
+}
+#myimage {
+}
+main::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  height: 1fr;
+  width: 5px;
+  top: 0%;
+  bottom: 0%;
+  right: 540px;
+  z-index: -1;
+}
   main {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -53,9 +78,9 @@
     grid-template-areas:
     "h a"
     "b c";
-    padding: 10px;
-    padding-top: 150px;
-    margin: 10px;
+    padding: 0px;
+    padding-bottom: 10px;
+    margin: 0px;
     justify-items: center;
     align-items: center;
     z-index: 2;
@@ -64,12 +89,12 @@
   main::after {
     content: '';
     position: absolute;
-    background-color: rgb(29,29,27);
+    background-color: black;
     height: 5px;
-    width: 2000px;
+    width: 1fr;
     right: 0px;
     left: 0px;
-    top: 600px;
+    top: 500px;
     z-index: -1;
 
   }
@@ -79,7 +104,7 @@
     grid-area: h;
   }
   main > div {
-    background-color: rgb(29,29,27);
+    background-color: black;
     border-radius: 20px;
     padding: 50px;
     font-size: 40px;
@@ -97,87 +122,116 @@
     color: white;
   }
 
-  aside {
-    background-color: #0099CC;
-    grid-area: aside;
-  }
-
-  .a {
+.a {
     grid-area: a;
     text-align: ;
     background-image: url('Images/product.jpg');
     background-size: cover;
     padding: 60px 240px 60px 60px;
-  }
+}
 
-  .b {
+.b {
     grid-area: b;
     background-image: url('Images/ml.jpg');
     background-size: cover;
     padding: 40px 220px 80px 20px;
-  }
-  .c {
+}
+.c {
     grid-area: c;
     background-image: url('Images/coding.jpg');
     background-size: cover;
     padding: 50px 130px 150px 30px;
-  }
+}
 
-  .button {
-    background-color: #fa625f;
+.button {
+    background-color: white;
     font-size: 20px;
-    color: rgb(3,3,3);
+    color: black;
     border-bottom: 4px solid rgb(3,3,3);
     padding: 5px;
     text-decoration: none;
     animation: reverse-bg 800ms forwards, reverse-color
 
-  }
-    main > div:hover {
+}
+main > div:hover {
       animation: scale 500ms forwards;
 
-    }
+  }
 
-  .button:hover {
-    background-color: #fa625f;
-    color: rgb(3,3,3);
+.button:hover {
     animation: background-color 800ms forwards, color-change 800ms forwards;
-  }
-  @keyframes background-color {
+}
+@keyframes background-color {
       100% {
-        background-color: rgb(3,3,3);
+        background-color: black;
       }
-    }
-  @keyframes color-change {
-    100% {
-      color: #fa625f;
-    }
   }
-  @keyframes scale {
+@keyframes color-change {
+    100% {
+      color: white;
+    }
+}
+@keyframes scale {
     100% {
       transform: scale(1.1);
     }
-  }
-  @keyframes reversescale {
+}
+@keyframes reversescale {
     0% {
       transform: scale(1.1);
     }
     100% {
       transform: scale(1);
     }
-  }
+}
 footer {
-  background-color: rgb(29,29,27);
+  background-color: black;
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr auto auto auto 3fr;
+  grid-template-columns: 2fr auto auto auto 3fr;
   justify-items: center;
   align-items: center;
   grid-gap: 2em;
   color: rgb(170,170,170);
-  padding: 40px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
   z-index: 2;
   grid-area: footer;
+}
+.fb, .instagram, .linkedin {
+  opacity: 70%;
+}
+.fb:hover, .instagram:hover, .linkedin:hover {
+  opacity: 100%;
+}
+.scrollup {
+  background: white;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+}
+.scrollup::after {
+  content: "";
+  background: black;
+  position: absolute;
+  top: 25px;
+  bottom: 0px;
+  left: 5px;
+  height: 30px;
+  width: 30px;
+  transform: rotate(45deg);
+
+}
+.scrollup:hover {
+  opacity: 100%;
+  border: 4px solid grey;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 767.98px)  {
+
 }
