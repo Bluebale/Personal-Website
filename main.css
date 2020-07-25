@@ -57,6 +57,12 @@ aside {
 
 }
 #myimage {
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+#myimage:active {
+  filter: grayscale(30%);
+  animation: togrey 1ms backwards running;
 }
 main::before {
   content: '';
@@ -109,8 +115,9 @@ main::before {
     padding: 50px;
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
-    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     animation: reversescale 400ms;
+
   }
   main > div::before {
 
@@ -184,11 +191,18 @@ main > div:hover {
       transform: scale(1);
     }
 }
+@keyframes move-in {
+  100% {
+    transform: translateX(50px);
+    opacity: 70%;
+  }
+}
+
 footer {
   background-color: black;
   position: relative;
   display: grid;
-  grid-template-columns: 2fr auto auto auto 3fr;
+  grid-template-columns: 2fr auto auto auto 2fr;
   justify-items: center;
   align-items: center;
   grid-gap: 2em;
@@ -212,7 +226,7 @@ footer {
   border-radius: 50%;
 
 }
-.scrollup::after {
+.scrollup::before {
   content: "";
   background: black;
   position: absolute;
@@ -222,11 +236,24 @@ footer {
   height: 30px;
   width: 30px;
   transform: rotate(45deg);
+  pointer-events: none;
+}
+.scrollup::after {
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  height: 120%;
+  width: 140%;
+  border-radius: 50%;
+  pointer-events: none;
 
 }
-.scrollup:hover {
+.scrollup:hover::after {
   opacity: 100%;
-  border: 4px solid grey;
+  animation: move-in 600ms forwards;
+
 }
 
 html {
