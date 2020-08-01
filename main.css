@@ -133,9 +133,9 @@ main::before {
     padding: 40px 220px 80px 20px;
 }
 .c {
-    background-image: url('images/coding.jpg');
+    background-image: url('images/py.jpg');
     background-size: cover;
-    padding: 50px 130px 150px 30px;
+    padding: 100px 130px 150px 30px;
 }
 
 .button {
