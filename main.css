@@ -1,6 +1,8 @@
+
 body {
     background-color: white;
     margin:0px;
+    margin-top: 65px;
     padding: 0px;
     font-family: 'Josefin Sans', sans-serif;
   }
@@ -26,7 +28,7 @@ header {
 }
 .wrapper {
   display: grid;
-  grid-template-rows: 500px 0.7fr 180px;
+  grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-areas:
   "aside"
   "main"
@@ -34,24 +36,20 @@ header {
 }
 aside {
   background-color: black;
+  padding: 40px;
   position: relative;
-  display: grid;
-  grid-template-rows: 98px auto;
   grid-area: aside;
-}
-.content {
-  background-color: black;
-  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1.2fr 0.8fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
   justify-items: center;
   align-items: center;
+  grid-gap: 2em;
 }
 .subhead {
     font-size: 70px;
     color: white;
 }
-.content > p {
+aside > p {
   font-size: 25px;
   color: white;
 
@@ -76,17 +74,12 @@ main::before {
   z-index: -1;
 }
   main {
+    background-color: white;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 4em;
-    grid-template-areas:
-    "h a"
-    "b c";
-    padding: 0px;
-    padding-bottom: 10px;
-    margin: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 4em;
+    padding: 20px;
     justify-items: center;
     align-items: center;
     z-index: 2;
@@ -107,7 +100,6 @@ main::before {
   main > h1 {
     color: black;
     font-size: 90px;
-    grid-area: h;
   }
   main > div {
     background-color: black;
@@ -130,7 +122,6 @@ main::before {
   }
 
 .a {
-    grid-area: a;
     text-align: ;
     background-image: url('images/product.jpg');
     background-size: cover;
@@ -138,13 +129,11 @@ main::before {
 }
 
 .b {
-    grid-area: b;
-    background-image: url('images/ml.jpg');
-    background-size: cover;
+    background-image: url('images/robo.png');
+    background-position: top 20px left 80px;
     padding: 40px 220px 80px 20px;
 }
 .c {
-    grid-area: c;
     background-image: url('images/coding.jpg');
     background-size: cover;
     padding: 50px 130px 150px 30px;
@@ -200,6 +189,7 @@ main > div:hover {
 
 footer {
   background-color: black;
+  padding: 30px;
   position: relative;
   display: grid;
   grid-template-columns: 2fr auto auto auto 2fr;
