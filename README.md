@@ -1,2 +1,2 @@
 # Personal-Website
-My website that is personal
+A website of mine that is personal
