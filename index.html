@@ -2,36 +2,51 @@
 <html>
   <head>
     <title>Fasi's Projects</title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
-    <script src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="index.js"></script>
   </head>
-  <body class="wrapper">
-    <header>
-      <div class="logo" id="logo"><img src="images/pac.png" height="40px"/></div>
-      <a href="index.html" id="home" class="button"><strong>home</strong></a>
-      <a href="#start" id="about" class="button"><strong>about</strong></a>
-      <a href="#projects" id="project" class="button"><strong>projects</strong></a>
-      <a href="#num" id="contact" class="button"><strong>contact</strong></a>
-    </header>
-    <main id="projects">
-      <h1 class="h">FASI's <br>PROJECTS</h1>
-      <div class="a">Product <br> Design</div>
-      <div class="b">Machine <br>Learning</div>
-      <div class="c">Coding</div>
-    </main>
-    <aside class="about">
-      <img src="images/me.jpg" alt="myself" id="myimage"height="250px"/>
-      <p> My name is Faseeh Ahmed. You can call me Fasi. I learn to love all the things I do. This makes my life so much easier and enjoyable. I code, design and create.</p>
-      <h2 class="subhead">ME</h2>
-    </aside>
-    <footer>
-      <div class="num" id="num">Phone-No: 7034073143</div>
-      <div class="fb"><a href="https://www.facebook.com/faseeh3/"><img src="images/fb.png" alt="facebook" height="40px"/></a></div>
-      <div class="linkedin"><a href="https://www.linkedin.com/in/faseeh-ahmed-5627911a9/"><img src="images/linkedin.png" alt="linkedin" style="border-radius:20%" height="40px"/></a></div>
-      <div class="instagram"><a href="https://www.instagram.com/fasi_and_happy"/><img src="images/ig.jpg" alt="instagram" height="40px"/></a></div>
-      <a href="#start"><div class="scrollup"><img src="" height="40px"/></div></a>
-    </footer>
+  <body>
+    <section class="nav-bar">
+      <div class="general">
+        <a href="#home" id="homebtn" class="btn"><strong>home</strong></a>
+        <a href="#home" id="about" class="btn"><strong>about</strong></a>
+        <a href="#projects" id="project" class="btn"><strong>projects</strong></a>
+        <a href="#num" id="contact" class="btn"><strong>contact</strong></a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/faseeh-ahmed-5627911a9/" id="linkedin" class="btn">linkedin</a>
+        <a href="fasihere@gmail.com" id="email" class="btn">email</a>
+      </div>
+    </section>
+    <div class="wrapper">
+      <section class="home" id="home">
+        <h1>FASEEH <br> AHMED</h1>
+        <a href="#projects" class="scroll-down">
+          <div class="mouse"><span></span>
+          </div>
+          <div class="arrow"><span></span>
+          </div>
+        </a>
+      </section>
+      <section id="projects">
+        <h1 class="h">FASI's PROJECTS</h1>
+        <div class="boxes">
+          <div class="box" id="a">Product <br> Design</div>
+          <div class="box" id="b">Machine <br>Learning</div>
+          <div class="box" id="c">Coding</div>
+        </div>
+      </section>
+      <section id='footer'>
+        <div class="num" id="num">Phone-No: 7034073143</div>
+        <div class="fb"><a href="https://www.facebook.com/faseeh3/"><img src="images/fb.png" alt="facebook" height="40px"/></a></div>
+        <div class="linkedin"><a href="https://www.linkedin.com/in/faseeh-ahmed-5627911a9/"><img src="images/linkedin.png" alt="linkedin" style="border-radius:20%" height="40px"/></a></div>
+        <div class="instagram"><a href="https://www.instagram.com/fasi_and_happy"/><img src="images/ig.jpg" alt="instagram" height="40px"/></a></div>
+        <a href="#home"><div class="scrollup"><img src="" height="40px"/></div></a>
+      </section>
+    </div>
   </body>
 </html>
